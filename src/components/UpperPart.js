@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import SliderBar from "./SliderBar";
 import ToggleBar from "./ToggleBar";
 
 const UpperPart = () => {
+  const [value, setVal] = useState(100);
+
+  const handleChange = (e) => {
+    setVal(e.target.value);
+  };
   return (
     <div>
-      <div className="flex h-[4.6875rem] w-full items-center justify-center text-sm font-extrabold tracking-widest text-neutral-text lg:mt-5 lg:ml-11 lg:w-1/2 lg:items-center lg:justify-start lg:pt-4 lg:pl-1">
-        100K PAGEVIEWS
+      <div className="buble flex h-[4.6875rem] w-full items-center justify-center text-sm font-extrabold tracking-widest text-neutral-text lg:mt-5 lg:ml-11 lg:w-1/2 lg:items-center lg:justify-start lg:pt-4 lg:pl-1">
+        {value}K PAGEVIEWS
       </div>
-      <SliderBar />
+      <SliderBar handleChange={handleChange} value={value} />
       <div className="flex h-16 items-center justify-center lg:absolute lg:top-8 lg:right-12">
         <p className="mr-2 text-[1.875rem] font-extrabold text-neutral-text_ctaBackground lg:text-[2.5rem]">
-          $16.00
+          ${Math.abs(value * 0.16).toFixed(2)}
         </p>
         <p className="text-sm text-neutral-text lg:text-lg">/ month</p>
       </div>
