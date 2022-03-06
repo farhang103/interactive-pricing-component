@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type="range"] {
+  @apply cursor-pointer appearance-none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: url(assets/icon-slider.svg) no-repeat center;
+
+  @apply flex
+    h-10 w-10 cursor-pointer appearance-none
+    items-center justify-center rounded-full bg-primary-sliderBackground hover:bg-[#0caa9b] focus:outline-none active:cursor-grabbing active:bg-[#0caa9b];
+}

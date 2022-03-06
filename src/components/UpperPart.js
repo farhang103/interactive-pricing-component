@@ -8,12 +8,24 @@ const UpperPart = () => {
   const handleChange = (e) => {
     setVal(e.target.value);
   };
+
+  let fillTrackPct = value / 2;
+  console.log(fillTrackPct);
+
+  const style = {
+    background:
+      "linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) " +
+      fillTrackPct +
+      "%, hsl(224, 65%, 95%) " +
+      fillTrackPct +
+      "%, hsl(224, 65%, 95%) 100%",
+  };
   return (
     <div>
       <div className="buble flex h-[4.6875rem] w-full items-center justify-center text-sm font-extrabold tracking-widest text-neutral-text lg:mt-5 lg:ml-11 lg:w-1/2 lg:items-center lg:justify-start lg:pt-4 lg:pl-1">
         {value}K PAGEVIEWS
       </div>
-      <SliderBar handleChange={handleChange} value={value} />
+      <SliderBar handleChange={handleChange} value={value} style={style} />
       <div className="flex h-16 items-center justify-center lg:absolute lg:top-8 lg:right-12">
         <p className="mr-2 text-[1.875rem] font-extrabold text-neutral-text_ctaBackground lg:text-[2.5rem]">
           ${Math.abs(value * 0.16).toFixed(2)}
