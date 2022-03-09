@@ -48,6 +48,6 @@ Making a custom range slider is not an easy task and took me a while to make it 
 ## Author
 
 - Frontend Mentor - [@farhang103](https://www.frontendmentor.io/profile/farhang103)
-- Instagram - [@farhang103](https://www.instagram.com/farhang_jobs)
+- Instagram - [@farhang_jobs](https://www.instagram.com/farhang_jobs)
 
 
