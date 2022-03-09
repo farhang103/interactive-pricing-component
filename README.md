@@ -6,7 +6,6 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  -- Making the range slider was the real challenge for designing it and also to make it functional 
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
